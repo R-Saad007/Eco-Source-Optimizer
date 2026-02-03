@@ -78,3 +78,5 @@ Since Flowise is a visual tool, you need to configure the "Brain" once after ins
    * Name: optimize_site
    * Schema & Code: Copy strictly from the ```Chatflow.json``` file included
    * Important: Ensure the URL in the tool code is ```http://backend:8000/optimize```
+  
+![Alt text](image/.png)
