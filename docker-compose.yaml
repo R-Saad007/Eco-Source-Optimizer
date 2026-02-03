@@ -1,0 +1,55 @@
+services:
+  # 1. The AxIn Logic Engine (Your Python Code)
+  backend:
+    build:
+      context: .             # Build context is the root so it can see the 'backend' folder
+      dockerfile: backend/Dockerfile
+    container_name: backend
+    ports:
+      - "8000:8000"
+    networks:
+      - axin_network
+    environment:
+      - PORT=8000
+
+  # 2. FlowiseAI (The Frontend)
+  flowise:
+    image: flowiseai/flowise
+    container_name: flowise
+    restart: always
+    environment:
+      - PORT=3000
+      - DATABASE_PATH=/root/.flowise
+      - APIKEY_PATH=/root/.flowise
+      - SECRETKEY_PATH=/root/.flowise
+      - LOG_LEVEL=DEBUG
+    ports:
+      - "3000:3000"
+    networks:
+      - axin_network
+    volumes:
+      - flowise_data:/root/.flowise
+
+  # 3. PostgreSQL (Optional - Database for persistence)
+  postgres:
+    image: postgres:15-alpine
+    container_name: axin_db
+    restart: always
+    environment:
+      POSTGRES_USER: axin_admin
+      POSTGRES_PASSWORD: axin_password
+      POSTGRES_DB: axin_db
+    ports:
+      - "5432:5432"
+    networks:
+      - axin_network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  axin_network:
+    driver: bridge
+
+volumes:
+  flowise_data:
+  postgres_data:
