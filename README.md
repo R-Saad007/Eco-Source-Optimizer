@@ -4,15 +4,15 @@ This MVP implements the **"Eco-Source Optimizer"** agent, which acts as a virtua
 
 Unlike standard chatbots, this system uses a deterministic **LangGraph** backend to enforce business logic and safety rules, ensuring that AI decisions are physically safe and economically optimal.
 
-## 🚀 Key Features
+## Key Features
 
-* **⚡ Eco-Source Optimizer:** Automatically decides the cheapest power source based on real-time tariffs and battery health.
-* **🛡️ "Immune System" Validation:** Uses **Pydantic** to strictly validate all incoming sensor data, preventing "hallucinated" values or sensor tampering (e.g., negative battery levels).
-* **🧠 Deterministic Logic:** Powered by **LangGraph**, ensuring predictable state transitions (e.g., "If battery < 30%, force Grid charge").
-* **💬 Human-Accessible Interface:** Uses **FlowiseAI** as a low-code chat interface, allowing Facility Managers to query site status and run optimizations using natural language.
-* **🐳 Dockerized Deployment:** One-click local deployment using Docker Compose.
+* ** Eco-Source Optimizer:** Automatically decides the cheapest power source based on real-time tariffs and battery health.
+* ** "Immune System" Validation:** Uses **Pydantic** to strictly validate all incoming sensor data, preventing "hallucinated" values or sensor tampering (e.g., negative battery levels).
+* ** Deterministic Logic:** Powered by **LangGraph**, ensuring predictable state transitions (e.g., "If battery < 30%, force Grid charge").
+* ** Human-Accessible Interface:** Uses **FlowiseAI** as a low-code chat interface, allowing Facility Managers to query site status and run optimizations using natural language.
+* ** Dockerized Deployment:** One-click local deployment using Docker Compose.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend / UI:** [FlowiseAI](https://flowiseai.com/) (Low-code LLM Orchestrator)
 * **Backend API:** FastAPI (Python)
@@ -21,7 +21,7 @@ Unlike standard chatbots, this system uses a deterministic **LangGraph** backend
 * **Infrastructure:** Docker & Docker Compose
 * **Database:** PostgreSQL (for state persistence)
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 /
