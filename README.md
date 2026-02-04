@@ -1,4 +1,4 @@
-## 📋 Overview
+## Overview
 
 This MVP implements the **"Eco-Source Optimizer"** agent, which acts as a virtual site manager. It analyzes real-time telemetry (battery levels, grid prices, site load) to intelligently switch between Grid, Battery, and Generator power sources.
 
@@ -6,11 +6,11 @@ Unlike standard chatbots, this system uses a deterministic **LangGraph** backend
 
 ## Key Features
 
-* ** Eco-Source Optimizer:** Automatically decides the cheapest power source based on real-time tariffs and battery health.
-* ** "Immune System" Validation:** Uses **Pydantic** to strictly validate all incoming sensor data, preventing "hallucinated" values or sensor tampering (e.g., negative battery levels).
-* ** Deterministic Logic:** Powered by **LangGraph**, ensuring predictable state transitions (e.g., "If battery < 30%, force Grid charge").
-* ** Human-Accessible Interface:** Uses **FlowiseAI** as a low-code chat interface, allowing Facility Managers to query site status and run optimizations using natural language.
-* ** Dockerized Deployment:** One-click local deployment using Docker Compose.
+* **Eco-Source Optimizer:** Automatically decides the cheapest power source based on real-time tariffs and battery health.
+* **"Immune System" Validation:** Uses **Pydantic** to strictly validate all incoming sensor data, preventing "hallucinated" values or sensor tampering (e.g., negative battery levels).
+* **Deterministic Logic:** Powered by **LangGraph**, ensuring predictable state transitions (e.g., "If battery < 30%, force Grid charge").
+* **Human-Accessible Interface:** Uses **FlowiseAI** as a low-code chat interface, allowing Facility Managers to query site status and run optimizations using natural language.
+* **Dockerized Deployment:** One-click local deployment using Docker Compose.
 
 ## Tech Stack
 
